@@ -19,3 +19,25 @@ export default class HolbertonCourse {
     this._name = value;
   }
 
+  get length() {
+    return this._length;
+  }
+
+  set length(value) {
+    if (typeof value !== 'number') {
+      throw new Error('Invalid input type');
+    }
+    this._length = value;
+  }
+
+  get students() {
+    return this._students;
+  }
+
+  set students(value) {
+    if (!Array.isArray(value)) {
+      throw new Error('Invalid input type');
+    }
+    this._students = value;
+  }
+}
